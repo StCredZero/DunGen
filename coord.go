@@ -6,7 +6,7 @@ import (
 	"math/big"
 	//"math/rand"
 	"sort"
-	"strconv"
+	//"strconv"
 )
 
 const subgrid_width = 79
@@ -97,13 +97,13 @@ func (self Coord) VisibleGrids(xdist int64, ydist int64, gcoords []GridCoord) []
 	return gcoords[:count]
 }
 
-func (self Coord) WriteDisplay(player Entity, buffer *bytes.Buffer) {
+/*func (self Coord) WriteDisplay(player Entity, buffer *bytes.Buffer) {
 	buffer.WriteString(`"`)
 	buffer.WriteString(strconv.FormatInt(self.x, 10))
 	buffer.WriteString(`,`)
 	buffer.WriteString(strconv.FormatInt(self.y, 10))
 	buffer.WriteString(`"`)
-}
+}*/
 
 type GridCoord struct {
 	x int64
